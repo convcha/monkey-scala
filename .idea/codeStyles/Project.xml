@@ -260,6 +260,9 @@
       <option name="EXPR_CASE_THEN_WRAP" value="true" />
       <option name="PRIMARY_KEY_NAME_TEMPLATE" value="{table}_{columns}_pk" />
     </SQLiteCodeStyleSettings>
+    <ScalaCodeStyleSettings>
+      <option name="FORMATTER" value="1" />
+    </ScalaCodeStyleSettings>
     <SqlCodeStyleSettings version="2">
       <option name="ALIAS_CASE" value="4" />
       <option name="KEYWORD_CASE" value="1" />
