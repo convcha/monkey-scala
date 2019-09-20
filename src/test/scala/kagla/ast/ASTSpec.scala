@@ -11,7 +11,7 @@ class ASTSpec extends FlatSpec with Matchers {
         LetStatement(
           token = Token(tokenType = LET, literal = "let"),
           name = Identifier(token = Token(tokenType = IDENT, literal = "myVar"), value = "myVar"),
-          value = Identifier(token = Token(tokenType = IDENT, literal = "anotherVar"), value = "anotherVar")
+          value = Some(Identifier(token = Token(tokenType = IDENT, literal = "anotherVar"), value = "anotherVar"))
         )
       )
     )
