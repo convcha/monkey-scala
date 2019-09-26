@@ -1,8 +1,7 @@
-package kagla
+package kagla.lexer
 
-import org.scalatest._
 import kagla.token.Token._
-import kagla.lexer.Lexer
+import org.scalatest._
 
 class LexerSpec extends FlatSpec with Matchers {
   "nextToken" should "return exact result" in {

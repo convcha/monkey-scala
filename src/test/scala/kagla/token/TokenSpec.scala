@@ -1,6 +1,5 @@
-package kagla
+package kagla.token
 
-import kagla.token.Token
 import org.scalatest._
 
 class TokenSpec extends FlatSpec with Matchers {
