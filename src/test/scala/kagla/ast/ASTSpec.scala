@@ -1,7 +1,7 @@
 package kagla.ast
 
-import kagla.Token
-import kagla.Token._
+import kagla.token.Token
+import kagla.token.Token._
 import org.scalatest._
 
 class ASTSpec extends FlatSpec with Matchers {

@@ -1,6 +1,6 @@
 package kagla.ast
 
-import kagla.Token
+import kagla.token.Token
 
 case class Program(statements: List[Statement]) {
   def tokenLiteral(): String = {

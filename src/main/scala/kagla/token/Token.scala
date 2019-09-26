@@ -1,6 +1,6 @@
-package kagla
+package kagla.token
 
-import kagla.Token.TokenType
+import kagla.token.Token.TokenType
 
 object Token {
   type TokenType = String
@@ -57,9 +57,10 @@ object Token {
         "return" -> RETURN)
 
   def apply(tokenType: TokenType, ch: Char): Token =
-    new Token(tokenType, ch.toString)
+    Token(tokenType, ch.toString)
 
   def lookupIdent(ident: String): TokenType = keywords.getOrElse(ident, IDENT)
 }
 
 case class Token(tokenType: TokenType, literal: String)
+

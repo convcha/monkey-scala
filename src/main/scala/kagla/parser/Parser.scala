@@ -1,28 +1,10 @@
 package kagla.parser
 
 import kagla.parser.Parser._
-import kagla.{Lexer, ast}
-import kagla.Token._
-import kagla.ast.{
-  ArrayLiteral,
-  BlockStatement,
-  CallExpression,
-  Expression,
-  ExpressionStatement,
-  FunctionLiteral,
-  HashLiteral,
-  Identifier,
-  IfExpression,
-  IndexExpression,
-  InfixExpression,
-  IntegerLIteral,
-  LetStatement,
-  PrefixExpression,
-  Program,
-  ReturnStatement,
-  Statement,
-  StringLIteral
-}
+import kagla.ast
+import kagla.token.Token._
+import kagla.ast.{ArrayLiteral, BlockStatement, CallExpression, Expression, ExpressionStatement, FunctionLiteral, HashLiteral, Identifier, IfExpression, IndexExpression, InfixExpression, IntegerLIteral, LetStatement, PrefixExpression, Program, ReturnStatement, Statement, StringLIteral}
+import kagla.lexer.Lexer
 
 object Parser {
   type PrefixParseFn = () => Option[Expression]

@@ -1,4 +1,7 @@
-package kagla
+package kagla.lexer
+
+import kagla.token
+import kagla.token.Token
 
 case class Lexer(input: String) {
   private var position = 0
@@ -16,7 +19,7 @@ case class Lexer(input: String) {
           val ch = this.ch
           readChar()
           val literal = ch.toString + this.ch.toString
-          Token(Token.EQ, literal)
+          token.Token(Token.EQ, literal)
         } else {
           Token(Token.ASSIGN, ch)
         }
@@ -27,7 +30,7 @@ case class Lexer(input: String) {
           val ch = this.ch
           readChar()
           val literal = ch.toString + this.ch.toString
-          Token(Token.NOT_EQ, literal)
+          token.Token(Token.NOT_EQ, literal)
         } else {
           Token(Token.BANG, ch)
         }
@@ -44,14 +47,14 @@ case class Lexer(input: String) {
       case '}'  => Token(Token.RBRACE, ch)
       case '['  => Token(Token.LBRACKET, ch)
       case ']'  => Token(Token.RBRACKET, ch)
-      case '"'  => Token(Token.STRING, readString())
-      case '\0' => Token(Token.EOF, "")
+      case '"'  => token.Token(Token.STRING, readString())
+      case '\0' => token.Token(Token.EOF, "")
       case _ =>
         if (isLetter(this.ch)) {
           val i = readIdentifier()
-          return Token(Token.lookupIdent(i), i)
+          return token.Token(Token.lookupIdent(i), i)
         } else if (isDigit(this.ch)) {
-          return Token(Token.INT, readNumber())
+          return token.Token(Token.INT, readNumber())
         } else {
           return Token(Token.ILLEGAL, this.ch)
         }

@@ -1,8 +1,8 @@
 package kagla.parser
 
-import kagla.Lexer
 import kagla.ast
 import kagla.ast.{ArrayLiteral, CallExpression, Expression, ExpressionStatement, FunctionLiteral, HashLiteral, Identifier, IfExpression, IndexExpression, InfixExpression, IntegerLIteral, LetStatement, PrefixExpression, ReturnStatement, Statement, StringLIteral}
+import kagla.lexer.Lexer
 import org.scalatest._
 
 class ParserSpec extends FlatSpec with Matchers {
