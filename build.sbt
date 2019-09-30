@@ -2,12 +2,12 @@ import Dependencies._
 
 ThisBuild / scalaVersion     := "2.12.8"
 ThisBuild / version          := "0.0.1"
-ThisBuild / organization     := "kagla"
-ThisBuild / organizationName := "kagla"
+ThisBuild / organization     := "monkey-scala"
+ThisBuild / organizationName := "monkey-scala"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "kagla",
+    name := "monkey-scala",
     libraryDependencies += scalaTest % Test
   )
 

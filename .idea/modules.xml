@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/kagla.iml" filepath="$PROJECT_DIR$/.idea/kagla.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kagla-build.iml" filepath="$PROJECT_DIR$/.idea/modules/kagla-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/monkey-scala.iml" filepath="$PROJECT_DIR$/.idea/monkey-scala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/monkey-scala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/monkey-scala-build.iml" />
     </modules>
   </component>
 </project>

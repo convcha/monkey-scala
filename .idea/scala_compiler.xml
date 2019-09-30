@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="kagla,kagla_4438" />
+    <profile name="sbt 1" modules="devilune.monkey-scala,github.com.devilune.monkey-scala,monkey-scala,monkey-scala_4438" />
   </component>
 </project>
