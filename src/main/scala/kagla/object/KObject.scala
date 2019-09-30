@@ -67,7 +67,7 @@ case class KFunction(parameters: Option[List[Identifier]], body: BlockStatement,
   override def inspect: String = {
     val params = parameters.getOrElse(List.empty[Identifier]).map(_.String()) mkString ", "
 
-    s"""fn($params {
+    s"""fn($params) {
        |${body.String()}
        |}
        |""".stripMargin
