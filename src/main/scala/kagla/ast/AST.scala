@@ -2,7 +2,7 @@ package kagla.ast
 
 import kagla.token.Token
 
-case class Program(statements: List[Statement]) {
+case class Program(statements: List[Statement]) extends Node {
   def tokenLiteral(): String = {
     if (statements.nonEmpty) {
       statements.head.tokenLiteral()

@@ -62,10 +62,10 @@ case class KError(message: String) extends KObject {
   override def inspect: String   = s"ERROR: $message"
 }
 
-case class KFunction(parameters: List[Identifier], body: BlockStatement, env: Environment) extends KObject {
+case class KFunction(parameters: Option[List[Identifier]], body: BlockStatement, env: Environment) extends KObject {
   override val vtype: ObjectType = KObject.FUNCTION_OBJ
   override def inspect: String = {
-    val params = parameters.map(_.String()) mkString ", "
+    val params = parameters.getOrElse(List.empty[Identifier]).map(_.String()) mkString ", "
 
     s"""fn($params {
        |${body.String()}
